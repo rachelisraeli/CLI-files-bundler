@@ -36,7 +36,7 @@ The CLI supports the following languages:
 
 ### Basic Commands
 
-**1. Bundle Command**
+   **1. Bundle Command**
 
    The `bundle` command allows you to combine files into a single output file.
 
@@ -63,21 +63,17 @@ The CLI supports the following languages:
 
    **Example:**
    
-      ```
       bundle -o bundled.cs -l cs -n -s name -r -a "Your Name"
-      ```
-
-**2. Create Response File**
+      
+   **2. Create Response File**
 
    The `create-rsp` command generates a response file for running predefined `bundle` commands.
 
    **Syntax:**
    
-     ```
        create-rsp
-     ```
 
-   The CLI will prompt for:
+   **The CLI will prompt for:**
 
    Response file name.
    
@@ -93,14 +89,6 @@ The CLI supports the following languages:
    
    Author's name.
    
-   Example:
-
-   ```
-   create-rsp
-   ```
-
-   You will then input the required details interactively.
-
 ### Example Run:
 
 To bundle all `.cs` files in the current directory and its subdirectories:
