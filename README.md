@@ -47,21 +47,22 @@ The CLI supports the following languages:
 
    **Options:**
    
-   **Option**	**Alias**	 **Description**
+   **Option**	      **Alias**	    **Description**
    
-   `--output`	   `-o`	     File path and name for the output file.
+   `--output`	         `-o`	        File path and name for the output file.
    
-   `--language`	 `-l`      Language to include (cs, java, etc.). Required.
+   `--language`	      `-l`          Language to include (cs, java, etc.). Required.
    
-   `--note`	     `-n`	     Add file paths and names as comments in the output.
+   `--note`	           `-n`	        Add file paths and names as comments in the output.
    
-   `--sort`	     `-s`	     Sort files by `name` or `type`.
+   `--sort`	           `-s`	        Sort files by `name` or `type`.
    
-   `--remove`     `-r`	     Remove empty lines from the files.
+   `--remove`          `-r`	        Remove empty lines from the files.
    
-   `--author`	   `-a`	     Include the author's name in the output file metadata.
+   `--author`	        `-a`	        Include the author's name in the output file metadata.
 
    **Example:**
+   
       ```
       bundle -o bundled.cs -l cs -n -s name -r -a "Your Name"
       ```
@@ -71,6 +72,7 @@ The CLI supports the following languages:
    The `create-rsp` command generates a response file for running predefined `bundle` commands.
 
    **Syntax:**
+   
      ```
        create-rsp
      ```
@@ -78,20 +80,29 @@ The CLI supports the following languages:
    The CLI will prompt for:
 
    Response file name.
+   
    Bundle file name.
+   
    Language to include.
+   
    Whether to include file names as comments.
+   
    File sorting preference.
+   
    Whether to remove empty lines.
+   
    Author's name.
    
    Example:
-   bash
-   Copy code
+
+   ```
    create-rsp
+   ```
+
    You will then input the required details interactively.
 
 ### Example Run:
+
 To bundle all `.cs` files in the current directory and its subdirectories:
 
    ```
@@ -99,9 +110,11 @@ To bundle all `.cs` files in the current directory and its subdirectories:
    ```
 
 To create a response file for a custom bundle:
-```
-  create-rsp
-```
+
+   ```
+     create-rsp
+   ```
+
 ## Code Explanation
   
 ### Error Handling:
@@ -112,4 +125,5 @@ Graceful error handling ensures the program reports issues (e.g., file write err
 ## Dependencies
 
 - `.NET 6.0` or higher
+  
 - `System.CommandLine` library
